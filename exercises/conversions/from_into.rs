@@ -44,6 +44,17 @@ impl Default for Person {
 
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
+        if s.to_string().len() == 0{
+            return Person::default()
+        }
+        
+        let arr : Vec<&str> = s.split(",").collect();
+        
+        if arr[0] == "" {
+            return Person::default()
+        }
+
+        Person::default()
     }
 }
 
