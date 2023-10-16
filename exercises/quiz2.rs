@@ -43,6 +43,7 @@ mod my_module {
                     let mut s = string.to_string();
                     let mut i = *times as i32;
                     for _ in 0..i {
+                        
                         s.push_str("bar");
                     }
                     output.push(s.to_string());
